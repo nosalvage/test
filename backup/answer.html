@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+    <title>Благодарим за заказ!</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    
+<!-- CSS Code -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="animatron.css">
+<!-- /CSS Code -->
+        <script type="text/javascript" src="/js/JQ211.js"></script>
+    
+    	<script type="text/javascript">
+                $(window).on('load', function () {
+                    var $Loader = $('#Loader'), $LoaderPic = $('#LoaderPic'), $LoaderCopyright = $('#LoaderCopyright');
+                    	$LoaderPic.delay(100).fadeIn('slow');
+                    	$LoaderCopyright.fadeIn('slow');
+                    	$LoaderCopyright.fadeOut('normal');
+                        $LoaderPic.fadeOut('normal');
+                        $Loader.delay(1100).fadeOut('slow');
+                        });
+         </script>
+    <style>
+#Loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    z-index: 1000;
+}
+
+#LoaderPic {
+    display: none;
+    position: absolute;
+    z-index: 1001;
+    width: 100%;
+    top: 44%;
+    text-align: center;
+}
+
+#LoaderCopyright {
+    display: none;
+    position: absolute;
+    z-index: 1001;
+    width: 100%;
+    top: 88%;
+    text-align: center;
+    font-family: AlegreyaT;
+    font-size: 16pt;
+    color: white;
+}
+</style>
+ </head>
+<body>
+<div id="Loader"></div><p id="LoaderPic"><img src="images/2391.gif"></p><p id="LoaderCopyright">© Linc company 2015</p>
+    <div class="container">
+        <div class="top-border">
+        <p style="text-align: center"><img style="width: 15%" src="images/logo.png"></p>
+        <p style="color: #3d3d3d; font-size: 28pt; font-family: HelveticaL" class="top">Выполнено!</p>
+    </div>
+<h1 class="title" style="margin-top: 30px; font-family: HelveticaL; color: #3d3d3d; font-size: 26pt">Заказ успешно отправлен</br></h1>
+        <p style="margin-bottom: 20px; margin-top: 15px; font-family: HelveticaL; font-size: 22pt; color: #3d3d3d; text-align: center;" class="top">
+            Мы ответим на ваш e-mail</br> Пожалуйста дождитесь ответа
+        </p></br>
+            <a href="http://linc.company"><div align="center">
+                <div class="button" id="back">Назад</div>
+            </div></a>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!--\\\ Linc Company ///
+*************************************************
+*    @name           linc.company 	        *
+*    @author         Linc Company               *
+*    @copyright      © 2015 Linc Company        *
+*    @version        ALISA                      *
+*************************************************
+\\\ Linc Company ///-->
+
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Linc | Веб-студия</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/JQ211.js"></script>
+        
+    	<script type="text/javascript">
+                $(window).on('load', function () {
+                    var $Loader = $('#Loader'), $LoaderPic = $('#LoaderPic'), $LoaderCopyright = $('#LoaderCopyright');
+                    	$LoaderPic.delay(100).fadeIn('slow');
+                    	$LoaderCopyright.fadeIn('slow');
+                    	$LoaderCopyright.fadeOut('normal');
+                        $LoaderPic.fadeOut('normal');
+                        $Loader.delay(1100).fadeOut('slow');
+                        });
+         </script>
+    
+<script type="text/javascript">
+	$(document).ready(function() {
+	$('#GO').click(function(){
+	$('#Overlay').fadeIn(500, function(){ 
+				$('#OrderForm') 
+					.fadeIn(600);
+		});
+	});
+	$('#Overlay').click( function(){
+				$('#OrderForm').fadeOut(300,
+				function(){
+					$(this).css('display','none');
+					$('#Overlay').fadeOut(400);
+				}
+			);
+		});
+	});
+</script>
+<!-- CSS Code -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="animatron.css">
+    <style>
+body {
+    margin: 0 auto;
+    background-image: url(back_d.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    z-index: 1000;
+}
+
+#LoaderPic {
+    display: none;
+    position: absolute;
+    z-index: 1001;
+    width: 100%;
+    top: 44%;
+    text-align: center;
+}
+
+#LoaderCopyright {
+    display: none;
+    position: absolute;
+    z-index: 1001;
+    width: 100%;
+    top: 88%;
+    text-align: center;
+    font-family: AlegreyaT;
+    font-size: 16pt;
+    color: white;
+}
+
+#OrderForm {
+	width: 26%; 
+    background: #e8e8e8;
+	height: 480px;
+	top: 0; left:0; right:0; bottom: 0;
+	border-radius: 25px;
+	position: absolute;
+	margin:auto;
+    display: none;
+	z-index: 2999;
+}
+
+#Overlay {
+	background: rgba(0,0,0,0.90);
+	width: 100%;
+	position: absolute;
+	z-index: 2998;
+	top: 0;
+	display: none;
+	bottom: 0}
+    </style>
+<!-- /CSS Code -->    
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+</head>
+    
+<body>
+<div id="Loader"></div><p id="LoaderPic"><img src="images/2391.gif"></p><p id="LoaderCopyright">© Linc company 2015</p>
+	<div id="block" align="center">
+		<div class="logo"></div>
+		<h1 style="font-size:52pt"><span style="font-family: AlegreyaL; letter-spacing: 1px">Linc </span><span style="font-weight: 300; font-family: AlegreyaT">company</span></h1>
+		<p>Разработка и редизайн сайтов</p>
+		<p>8 707-952-59-55 | 8 747-763-82-27</p>
+		<div class="button" id="GO">Заказать</div>
+	</div>
+		
+<div id="OrderForm" class="container">
+        <div class="top-border" style="margin:auto; ">
+            <div align="center">
+                <img class="imag" src="logo.png">
+            </div>
+            <p class="top">
+                <span style="font-family: AlegreyaL;  color: #3d3d3d">Linc </span><span style="font-family: AlegreyaT; color: #3d3d3d">company</span>
+            </p>
+        </div>
+        <p style="font-family: HelveticaL; font-size: 17pt; margin-bottom: 6%; color: #3d3d3d; margin-top: 1.5%;" class="top">
+            Оформить заявку сейчас
+        </p>
+        
+        <form action="email.php" name=mailer method=POST>
+            <div class="group">      
+                <input style="font-family: HelveticaL; font-size: 19pt" placeholder="Имя Фамилия" type="text" name=name maxlength=50 required>
+            </div>
+            <div class="group">      
+                <input style="font-family: HelveticaL; font-size: 19pt" placeholder="Телефон" type="text" name=name maxlength=50 required>
+            </div>
+
+            <div class="group">      
+                <input style="font-family: HelveticaL; font-size: 19pt" placeholder="Ссылка вконтакте" type="text" name=name maxlength=50 required>
+            </div>
+
+            <div class="group">      
+                <input style="font-family: HelveticaL; font-size: 19pt" placeholder="Почтовый адрес" type="email" name=email maxlength=50 required>
+            </div>
+
+            <div align="center">
+                <input type=submit value="Отправить"  class="button-send">
+            </div>
+
+            </div>
+        </form>
+    
+  <div id="Overlay"></div>
+</body>   
+</html>

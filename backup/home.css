@@ -1,0 +1,529 @@
+/*\\\ Linc Company ///
+*************************************************
+*    @name           linc.company 	            *
+*    @author         Linc Company               *
+*    @copyright      © 2015 Linc Company        *
+*    @version        ALISA                      *
+*************************************************
+\\\ Linc Company ///*/
+
+@font-face {
+    font-family: 'AlegreyaL';
+    src: url('fonts/AlegreyaL.eot');
+    src: url('fonts/AlegreyaL.eot') format('embedded-opentype'),
+         url('fonts/AlegreyaL.woff2') format('woff2'),
+         url('fonts/AlegreyaL.woff') format('woff'),
+         url('fonts/AlegreyaL.ttf') format('truetype'),
+         url('fonts/AlegreyaL.svg#AlegreyaLight') format('svg');
+}
+
+@font-face {
+    font-family: 'AlegreyaT';
+    src: url('fonts/AlegreyaT.eot');
+    src: url('fonts/AlegreyaT.eot') format('embedded-opentype'),
+         url('fonts/AlegreyaT.woff2') format('woff2'),
+         url('fonts/AlegreyaT.woff') format('woff'),
+         url('fonts/AlegreyaT.ttf') format('truetype'),
+         url('fonts/AlegreyaT.svg#AlegreyaSansThin') format('svg');
+}
+
+@font-face {
+    font-family: 'HelveticaL';
+    src: url('fonts/HelveticaL.eot');
+    src: url('fonts/HelveticaL.eot') format('embedded-opentype'),
+         url('fonts/HelveticaL.woff2') format('woff2'),
+         url('fonts/HelveticaL.woff') format('woff'),
+         url('fonts/HelveticaL.ttf') format('truetype'),
+         url('fonts/HelveticaL.svg#HelveticaL') format('svg');
+}
+
+@font-face {
+    font-family: 'HelveticaT';
+    src: url('fonts/HelveticaT.eot');
+    src: url('fonts/HelveticaT.eot') format('embedded-opentype'),
+         url('fonts/HelveticaT.woff2') format('woff2'),
+         url('fonts/HelveticaT.woff') format('woff'),
+         url('fonts/HelveticaT.ttf') format('truetype'),
+         url('fonts/HelveticaT.svg#HelveticaT') format('svg');
+}
+
+body {
+    margin: 0 auto;
+    background-image: url(back_d.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+/* Basic */
+        .container 		{  
+            top:50%;
+           
+            background: rgba(255,255,255,0.97);
+            padding:7px 35px 35px;
+            box-shadow: 3px 2px 6px 0 rgba(0, 0, 0, 0.4);
+            border-radius: 2px}
+
+        .group 			  { 
+            position:relative; ;
+            margin-bottom:15px}
+            
+        input 	{
+            font-family: HelveticaT;
+            color: #3d3d3d;
+            
+            line-height: 1.2em;
+            display:block;
+            width:100%;
+            border:none;}
+
+        input:focus {outline:none}
+        
+/* Label */
+
+        label 	{
+            font-family: HelveticaL;
+            color: rgb(0,0,0); 
+            font-size:16px;
+            font-weight:normal;
+            position:absolute;
+            
+            left:5px;
+            top:10px;
+            }
+ 
+/* Active state */
+
+        
+
+/* Bottom bars */
+
+        .bar 	{
+            position:relative;
+            display:block;
+            width:100%}
+
+        .bar:before, .bar:after {
+            content:'';
+            height:2px; 
+            width:0;
+            bottom:1px; 
+            position:absolute;
+            background:#FE0000; 
+            transition:0.2s ease all; 
+            -moz-transition:0.2s ease all; 
+            -webkit-transition:0.2s ease all}
+
+        .bar:before {
+            left:50%}
+
+        .bar:after {
+            right:50%}
+
+/* Active state */
+
+        input:focus ~ .bar:before, input:focus ~ .bar:after {
+            width:50%}
+
+/* Highlighter */
+
+        .highlight {
+            position:absolute;
+            height:60%; 
+            width:100%; 
+            top:25%; 
+            left:0;
+            pointer-events:none;
+            opacity:0.5}
+    
+/* Active state */
+
+        input:focus ~ .highlight {
+        -webkit-animation:inputHighlighter 0.3s ease;
+        -moz-animation:inputHighlighter 0.3s ease;
+        animation:inputHighlighter 0.3s ease}
+
+/* Animations */
+
+        @-webkit-keyframes inputHighlighter {
+            from { background:#5264AE; }
+            to 	{ width:0; background:transparent; }}
+
+        @-moz-keyframes inputHighlighter {
+            from { background:#5264AE; }
+            to 	{ width:0; background:transparent; }}
+
+        @keyframes inputHighlighter {
+            from { background:#5264AE; }
+            to 	{ width:0; background:transparent; }}
+
+        
+        
+/* Button */
+    
+    .button {
+        background-color: #EA4645;
+        height: auto;
+        width: 50%;
+        box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.24);
+        border-bottom: 4px solid transparent;
+        transition: all 0.2s ease 0s;
+        font-family: HelveticaT;
+        font-size: 30px;
+        line-height: 1.4em;
+        color: #FFF;
+        border-radius: 5px;
+     	cursor: pointer}
+           
+    .button:hover {
+        
+        box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.54);
+        border-bottom: 4px solid #A42F30;
+        cursor: pointer}
+            
+    .button:active {
+        line-height: 1.35em;
+        border-bottom: 4px solid #A42F30;
+        cursor: pointer}
+        
+    .button-send {
+        background-color: #EA4645;
+        height: auto;
+        width: 120px;
+        box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.24);
+        border-bottom: 4px solid transparent;
+        transition: all 0.2s ease 0s;
+        font-family: HelveticaT;
+        font-size: 20px;
+        line-height: 1.4em;
+        color: #FFF;
+        border-radius: 5px;
+        cursor: pointer}
+           
+    .button-send:hover {
+        border-bottom: 4px solid #A42F30;
+        cursor: pointer}
+            
+    .button-send:active {
+        line-height: 1.35em;
+        
+        border-bottom: 4px solid #A42F30;
+        cursor: pointer}
+        
+    input::-webkit-input-placeholder {
+         font-family: HelveticaT;
+         color: #3d3d3d;
+         font-size: 16pt;
+         font-weight: 100;
+         padding-left: 5px;
+    }
+    input:-moz-placeholder {
+        font-family: HelveticaT;
+         color: #3d3d3d;
+         font-size: 16pt;
+         font-weight: 100;
+         left: 5px;
+    }
+
+    .imag {
+        height: 150px;
+        margin-top: 3%;}
+        
+    p.top   {
+        text-align:center;
+        margin-top: 0;
+        font-size:34pt;
+        line-height: 1.3em}
+
+/* End */
+
+
+#block {
+	margin-top:6%;
+	
+}
+
+.logo {
+	background-image: url(images/logo2.png);
+	width:256px;
+	height:256px;
+	margin:0 auto;
+}
+
+h1 {
+	margin:0;
+	padding:0;
+	font-family: HelveticaT;
+	color: white;
+}
+p {
+	font-family: HelveticaT;
+	color:white;
+	font-size:35px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#navbar {
+    background: #54585B;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    height: 46px;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0);
+    z-index: 21;
+}
+
+
+#navbar li {
+    display: inline;
+}
+
+#navbar a {
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    display: inline-block;
+    width: 150px;
+    transition: 0.3s;
+}
+
+#navbar a:hover {
+    color: #bababa;
+}
+
+.mac{
+    margin: 40px 0px 20px 0;
+    width: 100%;
+}
+
+.imagecenter{text-align:center}
+
+.content{
+    width: 980px;
+    margin:auto;
+    top:100px;
+    padding: 0px;
+    border: medium none;
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+.top-border{
+    border-bottom: 1px solid rgba(25,25,25,0.3);
+    margin:auto;
+    top:80px;
+}
+
+.top{
+    font-size: 16pt;
+
+    font-weight: 111;
+    margin-top: 3%;
+    margin-bottom: 0px;
+}
+
+h1.title{
+    font-weight: 100;
+    text-align: center;
+    font-size: 3.4375em;
+}
+
+#rig {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: right;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    margin-top: -4%;
+    list-style-type: none;
+    float: right;
+}
+
+#rig li {
+    display: inline;
+}
+
+#rig a {
+    padding: 7px 15px;
+    text-decoration: none;
+    display: inline-block;
+    color: #54585b;
+    transition: 0.3s;
+}
+
+#rig a:hover {
+    color: #c1c1c1;   
+}
+
+.left {
+    float: left;
+    width: 490px;
+}
+
+.right {
+    float: right;
+    width: 490px;
+}
+
+.plus {
+    float: right;
+    margin-bottom: 55px;
+}
+
+/* Button */
+    
+ .button{
+    background-color: #ea4645;
+    margin-bottom:3px;
+    height: auto;
+    width: 180px;
+    text-align: center;
+    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.24);
+    border-bottom: 4px solid  rgba(0,0,0,0);
+    transition: all 0.2s;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 1.4em;
+    color: white;
+    border-radius: 5px
+}
+
+.button:hover{
+    box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.54);
+	border-bottom: 4px solid #a42f30;
+	transition: all 0.2;
+}
+
+.button:active{
+    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.54);
+}
+
+/* Button end */
+
+/* LABEL */
+
+label 	{
+    color:#999; 
+    font-size:18px;
+    font-weight:normal;
+    
+    
+    left:5px;
+    top:10px;
+    }
+
+/* active state */
+
+
+/* BOTTOM BARS */
+
+.bar 	{ position:relative; display:block; width:100%}
+
+.bar:before, .bar:after {
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:#5264AE; 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all}
+
+.bar:before {
+    left:50%}
+
+.bar:after {
+    right:50%}
+
+/* active state */
+
+
+
+/* HIGHLIGHTER */
+
+.highlight {
+    position:absolute;
+    height:60%; 
+    width:100%; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5}
+    
+/* active state */
+
+
+
+/* ANIMATIONS */
+
+@-webkit-keyframes inputHighlighter {
+    from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }}
+
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }}
+
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }}
+
+   .photo {
+    position: relative;
+   }
+   .photo:hover::after {
+    width: 200px;
+    content: attr(data-title); 
+    position: absolute;
+    left: 550px; top: 0px;
+    z-index: 1;
+    color: #3d3d3d;
+    background: rgba(255, 255, 255, 0.92);
+    font-size: 14px;
+    padding: 5px 10px;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.56);
+   }
+
+.price {
+    width: 980px;
+    height: auto;
+}
+
+.price-block {
+    box-shadow: -1px 0px 0px 0px #D2D2D2 inset, -1px 0px 0px 0px #E6E6E6 inset, 1px 0px 0px 0px #D2D2D2 inset, 1px 0px 0px 0px #E6E6E6, 0px -1px 0px 0px #E8E8E8, 0px 2px 0px 0px rgba(241, 241, 241, 0.3), 0px 1px 0px 0px #B1B1B1;
+    float: left;
+    width: 480px;
+    margin: 5px;
+    height: 640px;
+}
+
+.p-text {
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid #F2F2F2;
+    margin: 15px 25px 15px 25px;
+}
+
+.triangle {
+    width: 0px;
+    height: 0px;
+    border-top: 100px solid #00D2FF;
+    border-right: 100px solid transparent;
+    position: absolute;
+    transform: scale(1.2, 1.2);
+}
