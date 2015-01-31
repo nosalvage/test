@@ -13,7 +13,7 @@ $MailTo = "linc.order@gmail.com";
       "Новый заказ (от: $name)",
       " Имя: $name \n Ссылка vk: $link \n Телефон: $phone \n Email: $email",
       "Content-type:text/plain; charset=utf-8")){
-		header("Location: ../home.html");
+		header("Location: ../index.php");
 	} else{
 		echo "Ошибка отправления заявки, свяжитесь с нами 87079525955";
 	}
