@@ -22,7 +22,7 @@ $json_token = json_encode($token);
 
   $client = new Google_Client();
   $client->setScopes(SCOPES);
-  $client->setRedirectUri('http://obscur.pro');
+  $client->setRedirectUri('http://localhost:2368/booking/');
   $client->setAuthConfigFile(CLIENT_SECRET_PATH);
   $client->setAccessType('offline');
   $client->refreshToken('1/VqLpOz83ZgbgJJaGwLSQuPMeaY_ZcT36uOX9atGfxKwMEudVrK5jSpoR30zcRFq6');
@@ -99,7 +99,7 @@ if($exist == false){
 
   $event = $service->events->insert($calendarId, $event_info);
   echo 'Запись добавлена';
-  header("Location: http://obscur.pro/booking.html");
+  //header("Location: http://localhost:2368/booking/");
 
 }
         
